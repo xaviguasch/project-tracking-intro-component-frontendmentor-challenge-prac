@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img class="logo-img" src="./images/logo.svg" alt="" />
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="navbar__element"><a href="#">Product</a></li>
+            <li class="navbar__element"><a href="#">Features</a></li>
+            <li class="navbar__element"><a href="#">Pricing</a></li>
+            <li class="navbar__element"><a href="#">·</a></li>
+            <li class="navbar__element"><a href="#">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
-  New
-  Monograph Dashboard
+    <main class="main">
+      <div class="copy">
+        <h3 class="subtitle"><span>New</span>Monograph Dashboard</h3>
+        <h1 class="title">Powerful insights into your team</h1>
+        <p class="text">Project planning and time tracking for agile teams</p>
+        <div class="button-area">
+          <button class="btn">Schedule a demo</button>
+          <p class="button-text-companion">To see a preview</p>
+        </div>
+      </div>
+      <div class="picture">
+        <img class="picture-img" src="./images/illustration-devices.svg" alt="" />
+      </div>
+    </main>
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <footer class="footer">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Xavi Guasch</a>.
+      </p>
+    </footer>
+  </body>
 </html>

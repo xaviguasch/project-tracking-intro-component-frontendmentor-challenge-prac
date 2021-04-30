@@ -1,3 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
+:root {
+  --ff-main: 'Barlow Condensed', sans-serif;
+  --ff-secondary: 'Barlow', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-08: 0.5em;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-60: 3.5rem;
+  --fs-64: 4rem;
+  --fs-80: 5rem;
+
+  --clr-red: hsl(0, 100%, 68%);
+  --clr-very-dark-blue: hsl(230, 29%, 20%);
+  --clr-dark-grayish-blue: hsl(230, 11%, 40%);
+  --clr-grayish-blue: hsl(231, 7%, 65%);
+  --clr-light-grayish-blue: hsl(207, 33%, 95%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body {
+  color: var(--clr-very-dark-blue);
+  font-family: var(--ff-main);
+  font-size: var(--fs-18);
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  color: inherit;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: underline;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  color: var(--clr-grayish-blue);
+  letter-spacing: 4px;
+  font-size: var(--fs-16);
+}
+
+.subtitle > span {
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  background-color: var(--clr-very-dark-blue);
+  padding: 0.3em 0.6em;
+  border-radius: 0.75em;
+  letter-spacing: 1px;
+  font-weight: var(--fw-regular);
+}
+
+.title {
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: var(--fs-40);
+}
+
+.text {
+  font-family: var(--ff-secondary);
+  color: var(--clr-dark-grayish-blue);
+}
+.button-text-companion {
+  text-transform: uppercase;
+  color: var(--clr-grayish-blue);
+  letter-spacing: 3px;
+  font-size: var(--fs-13);
+  display: inline-block;
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  color: var(--clr-white);
+  background-color: var(--clr-red);
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 0.75em 1.5em;
+  border: none;
+  letter-spacing: 1px;
+  font-size: var(--fs-14);
+  border-radius: 0.25em;
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+
+.container::before {
+  display: block;
+  content: '';
+  background-color: var(--clr-light-grayish-blue);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+
+  border-radius: 0 0 0 3em;
+  height: 420px;
+  z-index: -1;
+}
+
+.container {
+  margin: 2em auto 0.5em;
+  max-width: 450px;
+}
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
+/* HEADER */
+.header {
+  display: flex;
+  padding: 0 1.5em;
+}
+
+.logo {
+  margin-top: 0.3em;
+}
+
+.nav {
+  position: fixed;
+  background: var(--clr-white);
+  top: -400px;
+  right: 30px;
+  left: 30px;
+  height: 50%;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 4px 4px -1px;
+  transform: translateY(0%);
+  transition: transform 350ms;
+}
+
+.navigation-open {
+  transform: translateY(500px);
+}
+
+.nav-list {
+  height: 100%;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close-nav {
+  position: absolute;
+  background: var(--clr-light-grayish-blue);
+  padding: 0.25em;
+  border: 0;
+
+  top: -55px;
+  right: -5px;
+  cursor: pointer;
+}
+.open-nav {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  margin-left: auto;
+}
+
+/* MAIN */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.picture {
+  position: relative;
+  left: 10px;
+  width: 135%;
+  padding-top: 40px;
+}
+
+.copy {
+  order: 1;
+  margin-top: 4.5em;
+  padding: 0 1.5em;
+}
+
+.title {
+  margin-top: 0.6em;
+}
+
+.text {
+  margin-top: 0.75em;
+  width: 90%;
+}
+
+.button-area {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5em;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 4em;
+  padding: 0.25em 0 0;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
